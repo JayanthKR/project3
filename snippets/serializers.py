@@ -24,7 +24,7 @@ class SnippetSerializer(serializers.ModelSerializer):
         instance.language = validated_data.get('language', instance.language)
         instance.style = validated_data.get('style', instance.style)
         instance.save()
-        return instancefrom django.contrib.auth.models import User
+        return instancefrom
 
 class UserSerializer(serializers.ModelSerializer):
     snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())

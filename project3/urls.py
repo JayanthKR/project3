@@ -18,6 +18,8 @@ from django.urls import path,include
 from django.conf.urls import url,include
 from rest_framework import routers,serializers,viewsets
 from polls.API.V1.serializer_models import UserViewSet,QuestionViewSet,ChoiceVeiwSet
+from snippets.urls import *
+
 
 
 
@@ -32,6 +34,8 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls)),
+    path('', include('snippets.urls')),
+
 
 
 ]

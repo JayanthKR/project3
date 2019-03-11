@@ -39,4 +39,3 @@ class Snippet(models.Model):
     class Meta:
         ordering = ('created',)
 
-# Create your models here.

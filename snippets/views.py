@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
-
+from django.shortcuts import render
 
 @api_view(['GET', 'POST'])
 def snippet_list(request, format=None):
@@ -58,4 +58,6 @@ def snippet_detail(request, pk, format=None):
         serializer_class = UserSerializer
 
 # Create your views here.
+
+
 
